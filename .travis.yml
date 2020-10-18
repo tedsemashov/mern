@@ -7,3 +7,9 @@ node_js:
 branches:
   only:
     - main
+
+deploy:
+  provider: heroku
+  app: people-ex
+  api_key:
+    secure: 8e7dc375-a265-4ce1-ad7c-95ecb58f01ba
