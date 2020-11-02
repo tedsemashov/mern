@@ -1,0 +1,5 @@
+{
+  "port": 5000,
+  "jwtSecretKey": "mern app pex",
+  "mongoUri": "mongodb+srv://tedsemashov:Macmini2014@cluster0.zvtiv.mongodb.net/app?retryWrites=true&w=majority"
+}
