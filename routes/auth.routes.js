@@ -6,7 +6,7 @@ const { check, validationResult } = require('express-validator');
 const User = require('../models/User');
 const router = Router();
 
-// Endpoints
+// TODO Endpoints
 
 // /api/auth/register
 router.post(
@@ -34,6 +34,7 @@ router.post(
                 return res.status(400).json({ message: 'User email is available.'})
             }
 
+            // Hash password
             const hashedPassword = await bcrypt.hash(password, 12);
             const user = new User({ email, password: hashedPassword });
             await user.save();
@@ -70,6 +71,7 @@ router.post(
                 return res.status(400).json({ message: 'User not found.' });
             }
 
+            // Compare hashed passwords
             const isMatch = await bcrypt.compare(password, user.password);
 
             if(!isMatch) {

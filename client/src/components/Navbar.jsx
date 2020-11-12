@@ -17,7 +17,8 @@ export const Navbar =() => {
             <div className="nav-wrapper">
                 <span className="brand-logo">Ted's application</span>
                 <ul id="nav-mobile" className="right hide-on-med-and-down">
-                    <li><NavLink to="/detail">Details</NavLink></li>
+                    <li><NavLink to="/main">Main</NavLink></li>
+                    <li><NavLink to="/details">Details</NavLink></li>
                     <li><a href="/" onClick={logoutHandler}>Logout</a></li>
                 </ul>
             </div>
